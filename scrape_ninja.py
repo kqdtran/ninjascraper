@@ -52,11 +52,11 @@ def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS
                 
     # Download them into your local folder
     for info, url in exists.iteritems():
-        #print url
+        print url
         urllib.urlretrieve(url, info + ".pdf")
 
 sem_list = ["Fall", "Spring"]
-year_list = ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
+year_list = ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
 ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
 
@@ -87,7 +87,7 @@ def scrape_ninja(department="ECON", abv="ECON", course="100B", prof="Wood", test
     for info, url in exists.iteritems():
         print url
         urllib.urlretrieve(url, info + ".pdf")
-        
+
 if len(sys.argv) == 5:
     for test in tests: 
         scrape_ninja(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], test)
