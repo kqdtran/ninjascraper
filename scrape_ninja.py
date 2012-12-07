@@ -21,45 +21,80 @@ def scrape_hkn(abv="CS",course="70"):
         else:
             current_tuple += (text,) 
     prof_year[current_semester] = current_tuple
-    return prof_year 
-ways = ["","(solution)","solution"] 
+    return prof_year
 
-def scrape_ninja(course="70",test="Midterm 1",department="COMPSCI",abv="CS"):
+# Works well for CS courses. You only need to provide one argument
+def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS"):
     prof_year = scrape_hkn(abv,course)
     base_url = "http://media.ninjacourses.com/var/exams/1/{0}/{1}%20{2}%20-%20{3}%20{4}%20-%20{5}%20-%20{6}%20{7}.pdf" 
     exists = {}  
-    for semester,profs in prof_year.iteritems():
-            sem,year = tuple(semester.split()) 
-            for prof in profs:
+    for semester, profs in prof_year.iteritems():
+        sem, year = tuple(semester.split()) 
+        for prof in profs:            
+            for way in ways:
+                try:
+                    prof = prof.split()[-1] 
+                    test_split = test.split() 
+                    if len(test_split) == 1: 
+                        url = base_url.format(department, abv, course, sem, year, prof, test, way) 
+                        if not way:
+                            url = url[:-7] + ".pdf"
+                    elif len(test_split) == 2: 
+                        url = base_url.format(department, abv, course, sem, year, prof, test_split[0], test_split[1]) 
+                        if way:
+                            url = url[:-4] + "%20" + way + url[-4:]
+                    urllib2.urlopen(url)
+                    exists[str(profs + (test, way)) + " " + semester] = url
+                    
+                except Exception as e:
+                    pass
                 
-                for way in ways:
-                    try:
-                        prof = prof.split()[-1] 
-                        test_split = test.split() 
-                        if len(test_split) == 1: 
-                            url = base_url.format(department,abv,course,sem,year,prof,test,way) 
-                            if not way:
-                                url = url[:-7] + ".pdf"
-                        elif len(test_split) == 2: 
-                            url = base_url.format(department,abv,course,sem,year,prof,test_split[0],test_split[1]) 
-                            if way:
-                                url = url[:-4] + "%20"+way + url[-4:] 
+    # Download them into your local folder
+    for info, url in exists.iteritems():
+        #print url
+        urllib.urlretrieve(url, info + ".pdf")
 
-                            
-                        urllib2.urlopen(url) 
-                        exists[str(profs + (test,way))+" "+semester ] = url
-                    except Exception as e:
-                        #print e  
-                        pass
-    for info,url in exists.iteritems():
+sem_list = ["Fall", "Spring"]
+year_list = ["2011"]
+#year_list = ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
+ways = ["", "(solution)", "solution"]
+tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
+
+# Modified to temporarily work with ANY other courses
+def scrape_ninja(department="ECON", abv="ECON", course="100B", prof="Wood", test="Midterm 1", sem="Fall", year="2011"):
+    base_url = "http://media.ninjacourses.com/var/exams/1/{0}/{1}%20{2}%20-%20{3}%20{4}%20-%20{5}%20-%20{6}%20{7}.pdf" 
+    exists = {}
+    for year in year_list:
+        for sem in sem_list:
+            for way in ways:
+                try: 
+                    test_split = test.split() 
+                    if len(test_split) == 1: 
+                        url = base_url.format(department, abv, course, sem, year, prof, test, way)
+                        if not way:
+                            url = url[:-7] + ".pdf"
+                    elif len(test_split) == 2: 
+                        url = base_url.format(department, abv, course, sem, year, prof, test_split[0], test_split[1])
+                        if way:
+                            url = url[:-4] + "%20" + way + url[-4:]
+                    urllib2.urlopen(url)
+                    exists[str((prof, test, way)) + " " + sem + " " + year] = url
+                    
+                except Exception as e:
+                    pass
+
+    # Download them into your local folder
+    for info, url in exists.iteritems():
         print url
-        urllib.urlretrieve(url,info+ ".pdf")
-
-tests = ['Midterm','Midterm 1','Midterm 2', 'Midterm 3','Final']
-
-if (len(sys.argv) > 1):
+        urllib.urlretrieve(url, info + ".pdf")
+        
+if len(sys.argv) == 5:
     for test in tests: 
-        scrape_ninja(sys.argv[1],test) 
+        scrape_ninja(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], test)
+
+elif len(sys.argv) == 2:
+    for test in tests: 
+        scrape_ninja_cs(sys.argv[1], test)
+
 else:
-    for test in tests: 
-        scrape_ninja("70",test)
+    print "Not enough/Wrong arguments. Please try again." 
