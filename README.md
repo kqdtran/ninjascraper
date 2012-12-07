@@ -27,6 +27,7 @@ This will download all 61C Exams from NinjaCourses. Replace 61C with your *CS*'s
 So what do you need to do? Good question.
 
 * First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). Those words in CAPITAL is what you need. Write them down. I'll call this [DEPARTMENT ABBV] for future reference.
+
 ![Department's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/department_abbr.png)
 
 * Next, you need to know Ninja Course's Abbreviation for the Department. More than often, it's the same as above, for example, Business Admin = UGBA, or Math = MATH, for both cases. You may need to guess the abbreviation Ninja Course uses to store the exams so it may be a little annoying in this step. I'll name this [NINJA ABBV]. 
@@ -34,6 +35,7 @@ So what do you need to do? Good question.
 * You will also need the course number. ECON 100A's course number will be simply 100A. In other words, it's the class you want to download the exams for. [COURSE NUMBER]
 
 * Finally, you need to know the last name of the instructor(s) whose exams you want to download. Just go to the Ratings tab like what most of us usually do before our Telebear appointment xD. This will be called [PROF LAST NAME].
+
 ![Ninja Course's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/lastname.png)
 
 Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py in.
@@ -57,7 +59,7 @@ The result (for the above example):
 Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND STUDY!
 
 ### FAQs
-Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishall did for CS?
+Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
 
 A: I would love to, but I need to study for finals next week too... Beside, I'm inexperienced so that may not be feasible right now. I will do that when I can!
 
