@@ -48,12 +48,18 @@ For example, if I want to get ECON 100B's exams, in the ECON department, which i
 python scrape_ninja.py ECON ECON 100B Wood
 ```
 
+The result (for the above example):
+![Result1](https://raw.github.com/kqdtran/ninjascraper/master/img/result1.png)
+
+
+![Result2](https://raw.github.com/kqdtran/ninjascraper/master/img/result2.png)
+
 Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND STUDY!
 
 ### FAQs
 Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishall did for CS?
 
-A: I would love to, but we have finals next week... Beside, I'm inexperienced so that may take a lot of time. I will do that whenever I can!
+A: I would love to, but I need to study for finals next week too... Beside, I'm inexperienced so that may not be feasible right now. I will do that when I can!
 
 Q: Can I run this with Python3?
 
