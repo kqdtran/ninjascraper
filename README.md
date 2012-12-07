@@ -25,8 +25,12 @@ This will download all 61C Exams from NinjaCourses. Replace 61C with your *CS*'s
 
 So what do you need to do? Good question.
 
-* First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). 
+* First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). Those words in CAPITAL is what you need. Write them down.
 ![Department's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/department_abbr.png)
+
+* Next, you need to know Ninja Course's Abbreviation for the Department. More than often, it's the same as above, for example, Business Admin = UGBA, or Math = MATH, for both cases. You may need to guess the abbreviation Ninja Course uses to store the exams so it may be a little annoying in this step. 
+
+* Finally, you need to know the last name of the instructor(s) whose exams you want to download. 
 
 ### Original Description by Vaishall Shankar
 https://github.com/Vaishaal/ninjascraper
