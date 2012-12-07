@@ -14,7 +14,7 @@ You must have Python 2 on your computer (2.7 preferred). After that, just save t
 Please scroll down and read the heading below if you are not here for CS's Exams. By 'CS', I mean Computer Science, not Cognitive Science or Chicano Studies...
 
 On the terminal, type  
-```
+```python
 python scrape_ninja.py 61C 
 ```
 This will download all 61C Exams from NinjaCourses. Replace 61C with your *CS*'s course number to download the exams for that course. 
@@ -39,12 +39,12 @@ So what do you need to do? Good question.
 Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py in.
 
 The syntax will be
-```
+```python
 python scrape_ninja.py [DEPARTMENT ABBV] [NINJA ABBV] [COURSE NUMBER] [PROF LAST NAME]
 ```
 
 For example, if I want to get ECON 100B's exams, in the ECON department, which is taught by Professor Wood, I would type
-```
+```python
 python scrape_ninja.py ECON ECON 100B Wood
 ```
 
@@ -74,6 +74,6 @@ Super duper beta!
 only works for cs courses atm :P, and only works for finals.
 defaults to cs70. Downloads pdf files to local directory.
 Usage: (This will download all 61c final exams from ninjacourses)
-```
+```python
 python scrape_ninja.py 61C 
 ```
