@@ -25,12 +25,39 @@ This will download all 61C Exams from NinjaCourses. Replace 61C with your *CS*'s
 
 So what do you need to do? Good question.
 
-* First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). Those words in CAPITAL is what you need. Write them down.
+* First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). Those words in CAPITAL is what you need. Write them down. I'll call this [DEPARTMENT ABBV] for future reference.
 ![Department's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/department_abbr.png)
 
-* Next, you need to know Ninja Course's Abbreviation for the Department. More than often, it's the same as above, for example, Business Admin = UGBA, or Math = MATH, for both cases. You may need to guess the abbreviation Ninja Course uses to store the exams so it may be a little annoying in this step. 
+* Next, you need to know Ninja Course's Abbreviation for the Department. More than often, it's the same as above, for example, Business Admin = UGBA, or Math = MATH, for both cases. You may need to guess the abbreviation Ninja Course uses to store the exams so it may be a little annoying in this step. I'll name this [NINJA ABBV]. 
 
-* Finally, you need to know the last name of the instructor(s) whose exams you want to download. 
+* You will also need the course number. ECON 100A's course number will be simply 100A. In other words, it's the class you want to download the exams for. [COURSE NUMBER]
+
+* Finally, you need to know the last name of the instructor(s) whose exams you want to download. Just go to the Ratings tab like what most of us usually do before our Telebear appointment xD. This will be called [PROF LAST NAME].
+![Ninja Course's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/lastname.png)
+
+Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py in.
+
+The syntax will be
+```
+python scrape_ninja.py [DEPARTMENT ABBV] [NINJA ABBV] [COURSE NUMBER] [PROF LAST NAME]
+```
+
+For example, if I want to get ECON 100B's exams, in the ECON department, which is taught by Professor Wood, I would type
+```
+python scrape_ninja.py ECON ECON 100B Wood
+```
+
+Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND STUDY!
+
+### FAQs
+Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishall did for CS?
+A: I would love to, but we have finals next week... Beside, I'm inexperienced so that may take a lot of time. I will do that whenever I can!
+
+Q: Can I run this with Python3?
+A: Currently, no. Python3's urllib.request is pretty annoying and will require a lot of syntax's editting.
+
+Q: This is so cool! Thanks!
+A: You're welcome :) Please thanks Vaishall Shankar as well. He did almost everything. I basically just tweaked it a little bit, added in this big README file to make it clearer and support all other courses beside CS courses. 
 
 ### Original Description by Vaishall Shankar
 https://github.com/Vaishaal/ninjascraper
