@@ -13,7 +13,7 @@ You must have Python 2.6+ on your computer. After that, just save the scrape_nin
 
 You may also need to install BeautifulSoup4. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below) via googling.
 
-# If Python2 is the default version of Python on your machine and you want to use Python 2
+#### If Python2 is the default version of Python on your machine and you want to use Python 2
 
 * Set up easy_install (if it's not there already)
 ```
@@ -30,7 +30,7 @@ easy_install beautifulsoup4
 
 Yup! You are good to go. MacOSX users can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for Windows users, this may help: http://stackoverflow.com/questions/12228102/how-to-install-beautiful-soup-4-with-python-2-7-on-windows
 
-# If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
+#### If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
 
 Note: I don't think setuptools is supported for Py3k, but instead they use something called Distribute. I don't know how to use it yet so you have to stick with me through this long installation guide (not that long :p)
 
@@ -52,7 +52,7 @@ At this point, you should have BeautifulSoup4 installed on your machine. TIME TO
 ## Usage: For CS Courses only
 Please scroll down and read the heading below if you are not here for CS's Exams. By 'CS', I mean Computer Science, not Cognitive Science or Chicano Studies...
 
-# Python2
+#### Python2
 
 On the terminal, type  
 ```
@@ -62,7 +62,7 @@ This will download all CS61C Exams from Ninja Course. Replace 61C with your CS c
 
 (You may want to add a '2.7' after python if you have multiple versions of Python installed)
 
-# Python3
+#### Python3
 
 On the terminal, type  
 ```
@@ -135,6 +135,6 @@ Super duper beta!
 only works for cs courses atm :P, and only works for finals.
 defaults to cs70. Downloads pdf files to local directory.
 Usage: (This will download all 61c final exams from ninjacourses)
-```python
+```
 python scrape_ninja.py 61C 
 ```
