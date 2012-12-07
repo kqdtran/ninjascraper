@@ -1,31 +1,58 @@
-#### Ninja Scraper
+Ninja Scraper
+=============
 Get your exams from Ninja Course!
 
 ## Features and Descriptions
-* Download all the exams for the course you want into your local directory.
-* Currently works for EVERY course that has its exams posted. 
+* Download all of the exams for the course you want into your local directory.
+* Currently works for EVERY course that has its exams posted on Ninja Course. 
 * Worked extremely well for CS courses thanks to Vaishaal Shankar. 
 * Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (Guide below).
 
 ## Install
-You must have Python 2.6+ on your computer (2.7 preferred). After that, just save the scrape_ninja.py file to your local machine.
+You must have Python 2.6+ on your computer. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
 
-You may also need to install BeautifulSoup4. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below), or you can google it if you're stuck somewhere.
+You may also need to install BeautifulSoup4. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below) via googling.
 
-Set up easy_install (if it's not there already)
+# If Python2 is the default version of Python on your machine and you want to use Python 2
+
+* Set up easy_install (if it's not there already)
 ```
 sudo apt-get install python-setuptools
 ```
 
-Then install BeautifulSoup4 by typing:
+* Then install BeautifulSoup4 by typing:
+
 ```
 easy_install beautifulsoup4
 ```
 
+(You can also follow the guide below for Py3k, just replace Python3 with Python2 or Python)
+
 Yup! You are good to go. MacOSX users can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for Windows users, this may help: http://stackoverflow.com/questions/12228102/how-to-install-beautiful-soup-4-with-python-2-7-on-windows
+
+# If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
+
+Note: I don't think setuptools is supported for Py3k, but instead they use something called Distribute. I don't know how to use it yet so you have to stick with me through this long installation guide (not that long :p)
+
+* First, go to BS4's Website: http://www.crummy.com/software/BeautifulSoup/bs4/download/ and download the tarball of the latest version.
+* Unpack the package by right click on it and 'Extract Here'. If you want to do it via command line, I think
+
+```
+tar -zxvf beautifulsoup4-4.1.3.tar.gz	 
+```
+should do it. Replace the version's name in the tar file according to the version you downloaded.
+* cd into the directory that BS4 unpacked into. Do a 'ls' to make sure setup.py is there. Then, on the terminal, type
+
+```
+sudo python3 setup.py install
+```
+
+At this point, you should have BeautifulSoup4 installed on your machine. TIME TO GET THE EXAMS.
 
 ## Usage: For CS Courses only
 Please scroll down and read the heading below if you are not here for CS's Exams. By 'CS', I mean Computer Science, not Cognitive Science or Chicano Studies...
+
+# Python2
 
 On the terminal, type  
 ```
@@ -35,8 +62,16 @@ This will download all CS61C Exams from Ninja Course. Replace 61C with your CS c
 
 (You may want to add a '2.7' after python if you have multiple versions of Python installed)
 
+# Python3
+
+On the terminal, type  
+```
+python3 scrape_ninja_py3k.py 61C 
+```
+Same effect as above. 
+
 ## Usage: For All other Subjects
-*Note*: You will need to find the Department's Abbreviation Name, Ninja Course's Abbreviation for the Department, and your Professor's Last Name for this to work. It does sound like a lot of work, but trust me, it's relatively simple if you follow the guide below (and have used Ninja Course to build your schedule before).
+*Note*: You will need to find the Department's Abbreviation Name, Ninja Course's Abbreviation for the Department, and your Professor's Last Name for this to work. It does sound like a lot of work, but trust me, it's relatively simple if you follow the guide below or have used Ninja Course to build your schedule before. 
 
 So what do you need to do? Good question.
 
@@ -52,16 +87,20 @@ So what do you need to do? Good question.
 
 ![Ninja Course's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/lastname.png)
 
-Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py in.
+Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py or ninja_scraper_py3k.py in.
 
 The syntax will be
 ```
 python scrape_ninja.py [DEPARTMENT ABBV] [NINJA ABBV] [COURSE NUMBER] [PROF LAST NAME]
+or
+python3 scrape_ninja_py3k.py [DEPARTMENT ABBV] [NINJA ABBV] [COURSE NUMBER] [PROF LAST NAME]
 ```
 
 For example, if I want to get ECON 100B's exams, in the ECON department, which is taught by Professor Wood, I would type
 ```
 python scrape_ninja.py ECON ECON 100B Wood
+or
+python3 scrape_ninja_py3k.py ECON ECON 100B Wood
 ```
 
 The result (for the above example):
@@ -75,15 +114,15 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE
 ### FAQs
 Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
 
-A: I would love to, but I need to study for finals next week too... Beside, I'm inexperienced so that may not be feasible right now (there is no automatic mapping like HKN for other departments afaik). I will try to do that when I can!
+A: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
 
 Q: Can I run this with Python3?
 
-A: Currently, no. Python3's urllib.request is pretty annoying and will require a lot of syntax's editting. Again, I will try to port it to Python3 in the near future.
+A: Yup! Python3 is fully supported. (Or at least I tested with both 2k and 3k on my local machine and they all worked fine...)
 
 Q: This is so cool! Thanks!
 
-A: You're welcome :) Please thanks Vaishaal Shankar as well. He did almost everything. I basically just tweaked it a little bit, added in this big README file to make it clearer and support all other courses beside CS courses. 
+A: You're welcome :) Please say thanks to Vaishaal Shankar. He did almost everything. I basically just tweaked it a little bit to work for other department's courses, added in this big README file to make it clearer. 
 
 
 ### Original Description by Vaishaal Shankar
