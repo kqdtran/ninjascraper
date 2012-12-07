@@ -48,8 +48,6 @@ def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS
                     exists[str(profs + (test, way)) + " " + semester] = url
                     
                 except Exception as e:
-                    print e  
-                    traceback.print_exc()
                     pass
                 
     # Download them into your local folder
@@ -84,8 +82,6 @@ def scrape_ninja(department="ECON", abv="ECON", course="100B", prof="Wood", test
                     exists[str((prof, test, way)) + " " + sem + " " + year] = url
                     
                 except Exception as e:
-                    print e  
-                    traceback.print_exc()
                     pass
 
     # Download them into your local folder

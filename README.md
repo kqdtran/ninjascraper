@@ -8,7 +8,21 @@ Get your exams from Ninja Course!
 * Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (Guide below).
 
 ## Install
-You must have Python 2 on your computer (2.7 preferred). After that, just save the scrape_ninja.py file to your local machine.
+You must have Python 2.6+ on your computer (2.7 preferred). After that, just save the scrape_ninja.py file to your local machine.
+
+You may also need to install BeautifulSoup4. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below), or you can google it if you're stuck somewhere.
+
+Set up easy_install (if it's not there already)
+```
+sudo apt-get install python-setuptools
+```
+
+Then install BeautifulSoup4 by typing:
+```
+easy_install beautifulsoup4
+```
+
+Yup! You are good to go. MacOSX users can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for Windows users, this may help: http://stackoverflow.com/questions/12228102/how-to-install-beautiful-soup-4-with-python-2-7-on-windows
 
 ## Usage: For CS Courses only
 Please scroll down and read the heading below if you are not here for CS's Exams. By 'CS', I mean Computer Science, not Cognitive Science or Chicano Studies...
