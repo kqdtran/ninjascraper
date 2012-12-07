@@ -61,6 +61,7 @@ ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
 
 # Modified to temporarily work with ANY other courses
+# Default arguments work with Econ 100B's Midterm 1 in Fall 2011
 def scrape_ninja(department="ECON", abv="ECON", course="100B", prof="Wood", test="Midterm 1", sem="Fall", year="2011"):
     base_url = "http://media.ninjacourses.com/var/exams/1/{0}/{1}%20{2}%20-%20{3}%20{4}%20-%20{5}%20-%20{6}%20{7}.pdf" 
     exists = {}
