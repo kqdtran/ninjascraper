@@ -1,4 +1,4 @@
-### Ninja Scraper
+#### Ninja Scraper
 Gets your exams from Ninja Course!
 
 ## Features
@@ -26,7 +26,7 @@ This will download all 61C Exams from NinjaCourses. Replace 61C with your *CS*'s
 So what do you need to do? Good question.
 
 * First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). 
-![Department's Abbreviation](/img/department_abbr.png)
+![Department's Abbreviation](https://github.com/kqdtran/ninjascraper/blob/master/img/department_abbr.png)
 
 ### Original Description by Vaishall Shankar
 https://github.com/Vaishaal/ninjascraper
