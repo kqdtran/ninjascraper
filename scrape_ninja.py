@@ -1,9 +1,10 @@
 import urllib2, urllib, bs4
 import sys
+
 def is_semester(string):
     return "Fall " in string or "Spring " in string or "Summer " in string 
 
-def scrape_hkn(abv="CS",course="70"):
+def scrape_hkn(abv="CS", course="70"):
     prof_year = {} 
     html = urllib2.urlopen("https://hkn.eecs.berkeley.edu/coursesurveys/course/{0}/{1}".format(abv,course))
     soup = bs4.BeautifulSoup(html) 
@@ -55,8 +56,7 @@ def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS
         urllib.urlretrieve(url, info + ".pdf")
 
 sem_list = ["Fall", "Spring"]
-year_list = ["2011"]
-#year_list = ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
+year_list = ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
 ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
 
