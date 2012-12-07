@@ -6,7 +6,7 @@ def is_semester(string):
 
 def scrape_hkn(abv="CS", course="70"):
     prof_year = {} 
-    html = urllib2.urlopen("https://hkn.eecs.berkeley.edu/coursesurveys/course/{0}/{1}".format(abv,course))
+    html = urllib2.urlopen("https://hkn.eecs.berkeley.edu/coursesurveys/course/{0}/{1}".format(abv, course))
     soup = bs4.BeautifulSoup(html) 
     tables = soup.find_all("table")[1] 
     links = tables.find_all("a") 
@@ -48,6 +48,8 @@ def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS
                     exists[str(profs + (test, way)) + " " + semester] = url
                     
                 except Exception as e:
+                    print e  
+                    traceback.print_exc()
                     pass
                 
     # Download them into your local folder
@@ -55,7 +57,7 @@ def scrape_ninja_cs(course="70", test="Midterm 1", department="COMPSCI", abv="CS
         print url
         urllib.urlretrieve(url, info + ".pdf")
 
-sem_list = ["Fall", "Spring"]
+sem_list = ["Fall", "Spring", "Summer"]
 year_list = ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012"]
 ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
@@ -82,6 +84,8 @@ def scrape_ninja(department="ECON", abv="ECON", course="100B", prof="Wood", test
                     exists[str((prof, test, way)) + " " + sem + " " + year] = url
                     
                 except Exception as e:
+                    print e  
+                    traceback.print_exc()
                     pass
 
     # Download them into your local folder
