@@ -21,7 +21,6 @@ sudo apt-get install python-setuptools
 ```
 
 * Then install BeautifulSoup4 by typing:
-
 ```
 easy_install beautifulsoup4
 ```
@@ -36,13 +35,11 @@ Note: I don't think setuptools is supported for Py3k, but instead they use somet
 
 * First, go to BS4's Website: http://www.crummy.com/software/BeautifulSoup/bs4/download/ and download the tarball of the latest version.
 * Unpack the package by right click on it and 'Extract Here'. If you want to do it via command line, I think
-
 ```
 tar -zxvf beautifulsoup4-4.1.3.tar.gz	 
 ```
 should do it. Replace the version's name in the tar file according to the version you downloaded.
 * cd into the directory that BS4 unpacked into. Do a 'ls' to make sure setup.py is there. Then, on the terminal, type
-
 ```
 sudo python3 setup.py install
 ```
