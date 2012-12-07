@@ -1,9 +1,10 @@
 #### Ninja Scraper
 Gets your exams from Ninja Course!
 
-## Features
-* Currently worked for EVERY course that has potential exams. 
-* Worked extremely well for CS courses thanks to Vaishall Shankar. 
+## Features and Descriptions
+* Download all the exams for the course you want into your local directory.
+* Currently works for EVERY course that has its exams posted. 
+* Worked extremely well for CS courses thanks to Vaishaal Shankar. 
 * Modified to work for every course by me, but you need to know at least your professor's last name and the department's abbreviation to search for the exams.
 
 ## Install
@@ -51,15 +52,19 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND STUDY!
 
 ### FAQs
 Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishall did for CS?
+
 A: I would love to, but we have finals next week... Beside, I'm inexperienced so that may take a lot of time. I will do that whenever I can!
 
 Q: Can I run this with Python3?
+
 A: Currently, no. Python3's urllib.request is pretty annoying and will require a lot of syntax's editting.
 
 Q: This is so cool! Thanks!
-A: You're welcome :) Please thanks Vaishall Shankar as well. He did almost everything. I basically just tweaked it a little bit, added in this big README file to make it clearer and support all other courses beside CS courses. 
 
-### Original Description by Vaishall Shankar
+A: You're welcome :) Please thanks Vaishaal Shankar as well. He did almost everything. I basically just tweaked it a little bit, added in this big README file to make it clearer and support all other courses beside CS courses. 
+
+
+### Original Description by Vaishaal Shankar
 https://github.com/Vaishaal/ninjascraper
 
 gets exams from ninjacourses
