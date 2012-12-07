@@ -2,11 +2,11 @@ Ninja Scraper
 =============
 Get your exams from Ninja Course!
 
-## Features and Descriptions
+## Features and Acknowledgements
 * Download all of the exams for the course you want into your local directory.
 * Currently works for EVERY course that has its exams posted on Ninja Course. 
 * Worked extremely well for CS courses thanks to Vaishaal Shankar. 
-* Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (Guide below).
+* Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (See guide below).
 
 ## Install
 You must have Python 2.6+ on your computer. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
