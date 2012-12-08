@@ -11,7 +11,9 @@ Get your exams from Ninja Course!
 ## Install
 You must have Python 2.6+ on your computer. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
 
-You may also need to install BeautifulSoup4. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below) via googling.
+[B]You will also need to install BeautifulSoup4[/B]. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
+
+[B]Windows Users[/B]: For a comprehensive guide on how to setup Python and BeautifulSoup, please take a look at this: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
 
 #### If Python2 is the default version of Python on your machine and you want to use Python 2
 
@@ -31,14 +33,14 @@ Yup! You are good to go. MacOSX users can find a very similar guide here: http:/
 
 #### If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
 
-Note: I don't think setuptools is supported for Py3k, but instead they use something called Distribute. I don't know how to use it yet so you have to stick with me through this long installation guide (not that long :p)
+Note: I don't think setuptools is supported for Py3k, but instead they release something called Distribute. I don't know how to use it yet so you have to stick with me through this long installation guide (not that long :p)
 
 * First, go to BS4's Website: http://www.crummy.com/software/BeautifulSoup/bs4/download/ and download the tarball of the latest version.
 * Unpack the package by right click on it and 'Extract Here'. If you want to do it via command line, I think
 ```
 tar -zxvf beautifulsoup4-4.1.3.tar.gz	 
 ```
-should do it. Replace the version's name in the tar file according to the version you downloaded.
+ should do it. Replace the version's name in the tar file according to the version you downloaded.
 * cd into the directory that BS4 unpacked into. Do a 'ls' to make sure setup.py is there. Then, on the terminal, type
 ```
 sudo python3 setup.py install
@@ -74,11 +76,15 @@ So what do you need to do? Good question.
 
 * First, find the Department's Abbreviation Name by going to Ninja Course (http://ninjacourses.com/explore/1/). Those words in CAPITAL is what you need. Write them down. I'll call this [DEPARTMENT ABBV] for future reference.
 
+[U]Update[/U]: Also, please note that there should be no space between the Department's Abbreviation. For example, if the department is MEC ENG (Mechanical Engineering), please type without space MECENG. 
+
 ![Department's Abbreviation](https://raw.github.com/kqdtran/ninjascraper/master/img/department_abbr.png)
 
 * Next, you need to know Ninja Course's Abbreviation for the Department. More than often, it's the same as above, for example, Business Admin = UGBA, or Math = MATH, for both cases. You may need to guess the abbreviation Ninja Course uses to store the exams so it may be a little annoying in this step. I'll name this [NINJA ABBV]. 
 
-* You will also need the course number. ECON 100A's course number will be simply 100A. In other words, it's the class you want to download the exams for. [COURSE NUMBER]
+[U]Update[/U]: I've found that Ninja's Abbv is usually a combination of the initial of every word in the department's name. For example, Mechanical Engineering's Ninja Abbv would simply be ME, or Civil and Environmental Engineering would be CEE.  
+
+* You will also need the course number. ECON 100A's course number will be simply 100A. Please don't forget letter like 'C' for cross-listed or 'AC' for American Culture. In other words, it's the class you want to download the exams for. [COURSE NUMBER]
 
 * Finally, you need to know the last name of the instructor(s) whose exams you want to download. Just go to the Ratings tab like what most of us usually do before our Telebear appointment xD to look up their last names. This will be called [PROF LAST NAME].
 
