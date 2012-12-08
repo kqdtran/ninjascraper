@@ -9,11 +9,11 @@ Get your exams from Ninja Course!
 * Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (See guide below).
 
 ## Install
-You must have Python 2.6+ on your computer. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
+**You must have Python 2.6+ installed on your computer**. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
 
-[B]You will also need to install BeautifulSoup4[/B]. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
+**You will also need to install BeautifulSoup4**. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
 
-[B]Windows Users[/B]: For a comprehensive guide on how to setup Python and BeautifulSoup, please take a look at this: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
+**Windows Users**: For a comprehensive guide on how to setup Python and BeautifulSoup, please take a look at this: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
 
 #### If Python2 is the default version of Python on your machine and you want to use Python 2
 
@@ -49,7 +49,7 @@ sudo python3 setup.py install
 At this point, you should have BeautifulSoup4 installed on your machine. TIME TO GET THE EXAMS.
 
 ## Usage: For CS Courses only
-Please scroll down and read the heading below if you are not here for CS's Exams. By 'CS', I mean Computer Science, not Cognitive Science or Chicano Studies...
+Please scroll down and read the heading below if you are not here for CS's Exams. By **CS**, I mean Computer Science, not Cognitive Science or Chicano Studies...
 
 #### Python2
 
