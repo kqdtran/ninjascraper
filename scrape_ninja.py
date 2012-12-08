@@ -4,17 +4,48 @@ import os
 import re
 from bs4 import BeautifulSoup
 
+# Use for general scraping
 sem_list = ["Fall", "Spring", "Summer"]
 year_list = [str(year) for year in range(2000, 2013)]
 ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
-base_url = "http://ninjacourses.com/explore/1/course/"
 
+# Use for scrape_prof specifically
+two_four_list = ['CYPLAN', 'EALANG', 'LDARCH', 'NESTUD', 'PBHLTH']
+three_three_list = ['AGRCHM', 'BIOENG', 'CHMENG', 'CIVENG', 'COGSCI', 'COMLIT', 'DEVSTD',
+                    'ENVDES', 'ENVSCI', 'ETHSTD', 'ETHGRP', 'INDENG', 'LANPRO', 'MATSCI',
+                    'MECENG', 'MILAFF', 'MILSCI', 'NATRES', 'NAVSCI', 'NUCENG', 'POLSCI',
+                    'PUBPOL', 'SOCWEL', 'VISSCI', 'VISSTD']
+four_two_list = ['CRITTH', 'EURAST', 'PHYSED']
+
+def change_dep_match_url(dep="MECENG"):
+    if dep == 'LS':
+        new_dep = 'L%20&%20S'
+    elif dep == 'SASIAN':
+        new_dep = 'S%20ASIAN'
+    elif dep == 'MESTU':
+        new_dep = 'M%20E%20STU'
+    elif dep == 'ELENG':
+        new_dep = 'EL%20ENG'
+    elif dep == 'MEDST':
+        new_dep = 'MED%20ST'
+    elif dep in two_four_list:
+        new_dep = dep[:2] + '%20' + dep[2:]
+    elif dep in three_three_list:
+        new_dep = dep[:3] + '%20' + dep[3:]
+    elif dep in four_two_list:
+        new_dep = dep[:4] + '%20' + dep[4:]
+    else:
+        new_dep = dep
+    return new_dep
+        
 def is_semester(string):
     return "Fall " in string or "Spring " in string or "Summer " in string 
 
 def scrape_prof(department="COMPSCI", course="70"):
+    base_url = "http://ninjacourses.com/explore/1/course/"
     output_set = set()
+    department = change_dep_match_url(department)
     url = base_url + department + '/' + course + '/'
     html = urllib2.urlopen(url).read()
     soup = BeautifulSoup(html)
@@ -25,7 +56,7 @@ def scrape_prof(department="COMPSCI", course="70"):
         prof_name = result.text.split()[0]
         if prof_name[-1] == ',':
             prof_name = prof_name[:-1]
-        if re.match("^[A-Za-z,_-]+$", prof_name):
+        if re.match("^[A-Za-z,_-]+$", prof_name): # if prof's name only consists of characters
             output_set.add(prof_name)
     return output_set
     
@@ -81,7 +112,7 @@ def scrape_ninja_cs(course="70", department="COMPSCI", abv="CS"):
         print url
         urllib.urlretrieve(url, abv + course + '/' + info + ".pdf")
 
-# Modified to temporarily work with ANY other courses
+# Modified to work with ANY other courses
 def scrape_ninja(department="ECON", abv="ECON", course="100B"):
     base_url = "http://media.ninjacourses.com/var/exams/1/{0}/{1}%20{2}%20-%20{3}%20{4}%20-%20{5}%20-%20{6}%20{7}.pdf" 
     exists = {}
