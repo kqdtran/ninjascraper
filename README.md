@@ -109,7 +109,7 @@ The result (for the above example):
 
 Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE FINALS!
 
-### FAQs
+## FAQs
 **Q**: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
 
 **A**: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
@@ -134,10 +134,10 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE
 
 **A**: Have you checked if you followed all the steps above (download BS4, Python2.6+, accurate abbreviations for both departments and ninja, etc.)? If it still doesn't work after that, send me an email (please specify what commands you tried) and I'll try to retest it and download the exams for you. No worries!
 
-### Contact me
+## Contact me
 Please let me know if there is any bug, or if it's not working for you (see the last Q&A above). My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
 
-### Original Description by Vaishaal Shankar
+## Original Description by Vaishaal Shankar
 https://github.com/Vaishaal/ninjascraper
 
 gets exams from ninjacourses
