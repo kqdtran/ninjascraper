@@ -110,27 +110,27 @@ The result (for the above example):
 Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE FINALS!
 
 ### FAQs
-*Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
+* Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
 
 **A**: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
 
-*Q: How do I download the .py file(s)? I saved it from Github but it turned out to be some sort of DOCTYPE HTML file?
+* Q: How do I download the .py file(s)? I saved it from Github but it turned out to be some sort of DOCTYPE HTML file?
 
 **A**: You need to download the RAW file. Click on the .py file and then the RAW tab on the top right to view/download it. You should be able to get something like this https://raw.github.com/kqdtran/ninjascraper/master/scrape_ninja.py.
 
-*Q: Can I run this with Python[Insert Python Version here]?
+* Q: Can I run this with Python[Insert Python Version here]?
 
 **A**: Yup! Python3 and Python2 (2.6+) are supported. (Or at least I tested with both 2k and 3k on my local machine and they all worked fine...)
 
-*Q: Do I have to install BeautifulSoup4 for this to work?
+* Q: Do I have to install BeautifulSoup4 for this to work?
 
 **A**: I believe so! It's fairly straightforward and only takes a couple of minutes, so please go ahead and do it to save you some headache later on.  
 
-*Q: This is so cool! Thanks!
+* Q: This is so cool! Thanks!
 
 **A**: You're welcome :) Please say thanks to Vaishaal Shankar. He did almost everything. I basically just tweaked it a little bit to work for other department's courses, added in this big README file to make it clearer. 
 
-*Q: It's not working! 
+* Q: It's not working! 
 
 **A**: Have you checked if you followed all the steps above (download BS4, Python2.6+, accurate abbreviations for both departments and ninja, etc.)? If it still doesn't work after that, send me an email (please specify what commands you tried) and I'll try to retest it and download the exams for you. No worries!
 
