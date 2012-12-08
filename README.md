@@ -3,6 +3,7 @@ Ninja Scraper
 Get your exams from Ninja Course!
 
 ## Features and Acknowledgements
+* LATEST VERSION ONLY WORKS FOR EVERY DEPARTMENT WHOSE ABBREVIATION IS A WORD WITH NO SPACE. HENCE, DEPARTMENTS LIKE MEC ENG(MECHANICAL ENGINEERING), COM LIT(COMPARATIVE LITERATURE), ETC. WON'T WORK. YOU WILL HAVE TO REVERT TO AN EARLIER VERSION IF YOU WANT TO DOWNLOAD THE EXAMS FOR COURSES IN THOSE DEPARTMENTS.
 * Download all of the exams for the course you want into your local directory.
 * Currently work for EVERY course that has its exams posted on Ninja Course. 
 * Worked extremely well for CS courses thanks to Vaishaal Shankar. 
