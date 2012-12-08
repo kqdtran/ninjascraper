@@ -4,7 +4,7 @@ Get your exams from Ninja Course!
 
 ## Features and Acknowledgements
 * Download all of the exams for the course you want into your local directory.
-* Currently works for EVERY course that has its exams posted on Ninja Course. 
+* Currently work for EVERY course that has its exams posted on Ninja Course. 
 * Worked extremely well for CS courses thanks to Vaishaal Shankar. 
 * Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (See guide below).
 
@@ -13,7 +13,7 @@ Get your exams from Ninja Course!
 
 **You will also need to install BeautifulSoup4**. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
 
-#### If Python2 is the default version of Python on your machine and you want to use Python 2
+#### If Python2 is the default version of Python on your machine and you want to use Python2
 
 * Set up easy_install (if it's not there already)
 ```
@@ -27,7 +27,7 @@ easy_install beautifulsoup4
 
 (You can also follow the guide below for Py3k, just replace Python3 with Python2 or Python)
 
-Yup! You are good to go. **Mac OSX** users can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for **Windows users**, this may help: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
+Yup! You are good to go. **Mac OSX users** can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for **Windows users**, this may help: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
 
 #### If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
 
@@ -65,7 +65,7 @@ On the terminal, type
 ```
 python3 scrape_ninja_py3k.py 61C 
 ```
-Same effect as above. 
+which will yield the same effect as above. 
 
 ## Usage: For All other Subjects
 *Note*: You will need to find the Department's Abbreviation Name, Ninja Course's Abbreviation for the Department, and your Professor's Last Name for this to work. It does sound like a lot of work, but trust me, it's relatively simple if you follow the guide below or have used Ninja Course to build your schedule before. 
@@ -110,20 +110,28 @@ The result (for the above example):
 
 ![Result2](https://raw.github.com/kqdtran/ninjascraper/master/img/result2.png)
 
-Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE FINAL!
+Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE FINALS!
 
 ### FAQs
-Q: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
+**Q**: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
 
-A: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
+**A**: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
 
-Q: Can I run this with Python3?
+**Q**: How do I download the .py file(s)? I saved it from Github but it turned out to be some sort of DOCTYPE HTML file?
 
-A: Yup! Python3 is fully supported. (Or at least I tested with both 2k and 3k on my local machine and they all worked fine...)
+**A**: You need to download the RAW file. Click on the .py file and then the RAW tab on the top right to view/download it. You should be able to get something like this https://raw.github.com/kqdtran/ninjascraper/master/scrape_ninja.py.
 
-Q: This is so cool! Thanks!
+**Q**: Can I run this with Python[Insert Python Version here]?
 
-A: You're welcome :) Please say thanks to Vaishaal Shankar. He did almost everything. I basically just tweaked it a little bit to work for other department's courses, added in this big README file to make it clearer. 
+**A**: Yup! Python3 and Python2 (2.6+) are supported. (Or at least I tested with both 2k and 3k on my local machine and they all worked fine...)
+
+**Q**: Do I have to install BeautifulSoup4 for this to work?
+
+**A**: I believe so! It's fairly straightforward and only takes a couple of minutes, so please go ahead and do it to save you some headache later on.  
+
+**Q**: This is so cool! Thanks!
+
+**A**: You're welcome :) Please say thanks to Vaishaal Shankar. He did almost everything. I basically just tweaked it a little bit to work for other department's courses, added in this big README file to make it clearer. 
 
 
 ### Original Description by Vaishaal Shankar
