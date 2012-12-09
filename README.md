@@ -139,7 +139,7 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE
 **A**: You're welcome :) Please say thanks to Vaishaal Shankar as well. 
 
 ## Contact Me
-Please let me know if there is any bug, or if it's not working for you (see the last Q&A above). My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
+Please let me know if there is any bug, or if it's not working for you (see the third to last Q&A above). My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
 
 ## Original Description by Vaishaal Shankar
 https://github.com/Vaishaal/ninjascraper
