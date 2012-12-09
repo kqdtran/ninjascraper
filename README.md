@@ -2,19 +2,19 @@ Ninja Scraper
 =============
 Get your exams from Ninja Course!
 
-## Version and Changelog
-* v1.2: No need for professor's name anymore! It will now scrape through all exams belong to professors whose names are on the Ratings tab.
-* v1.1: Modified to work with every department, but users still need the abbreviations and professor's name. Also added support for Python3
-* v1.0: Forked from https://github.com/Vaishaal/ninjascraper
+## Versions and Changelog
+* **v1.2**(12/8/2012): Modified to take one less command-line argumment, aka no need for professor's name anymore! It will now scrape through all exams belong to professors whose names are on the Ratings tab. Also, the exams will be saved in a directory named after the course whose exams you want to search for.
+* **v1.1**(12/7/2012): Modified to work with every department, but users still need the abbreviations and professor's name. Also added support for Python3
+* **v1.0**(12/6/2012): Forked from https://github.com/Vaishaal/ninjascraper
 
 ## Features and Acknowledgements
 * Download all of the exams for the course you want into your local directory.
 * Currently work for EVERY course that has its exams posted on Ninja Course. 
 * Worked extremely well for CS courses thanks to Vaishaal Shankar. 
-* Modified to work for every course by me, but you will need to know at least the professor's last name and the department's abbreviation to search for the exams (See guide below).
+* Modified to work for every course by me, but you will need to know the department's abbreviation to search for the exams (See guide below).
 * There is a very, very tiny bug in v1.2. A couple of courses have exams belong to professors that are not on NinjaCourse. For example, CS174 has 4 exams belong to Prof. Bartlett, but as you can see, he doesn't have an entry on NC http://ninjacourses.com/explore/1/course/COMPSCI/174/#ratings so the scraper couldn't find him. I have yet to find a solution to this problem, but I'll try to look into it soon.
 
-## Install
+## Installation
 **You must have Python 2.6+ installed on your computer**. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
 
 **You will also need to install BeautifulSoup4**. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
@@ -95,11 +95,11 @@ or
 python3 scrape_ninja_py3k.py [DEPARTMENT ABBV] [NINJA ABBV] [COURSE NUMBER]
 ```
 
-For example, if I want to get ECON 100B's exams, I would type
+For example, if I want to get MATH 54's exams, I would type
 ```
-python scrape_ninja.py ECON ECON 100B
+python scrape_ninja.py MATH MATH 54
 or
-python3 scrape_ninja_py3k.py ECON ECON 100B
+python3 scrape_ninja_py3k.py MATH MATH 54
 ```
 
 The result (for the above example):
@@ -126,15 +126,19 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE
 
 **A**: I believe so! It's fairly straightforward and only takes a couple of minutes, so please go ahead and do it to save you some headache later on.  
 
-**Q**: This is so cool! Thanks!
-
-**A**: You're welcome :) Please say thanks to Vaishaal Shankar. He did almost everything. I basically just tweaked it a little bit to work for other department's courses, added in this big README file to make it clearer. 
-
 **Q**: It's not working! 
 
 **A**: Have you checked if you followed all the steps above (download BS4, Python2.6+, accurate abbreviations for both departments and ninja, etc.)? If it still doesn't work after that, send me an email (please specify what commands you tried) and I'll try to retest it and download the exams for you. No worries!
 
-## Contact me
+**Q**: Why is v1.2 taking soooooo long to run?
+
+**A**: It should be, unfortunately. We're scraping through every combination of professor's last name, semester, year, etc. Please be patient!
+
+**Q**: This is so cool! Thanks!
+
+**A**: You're welcome :) Please say thanks to Vaishaal Shankar as well. 
+
+## Contact Me
 Please let me know if there is any bug, or if it's not working for you (see the last Q&A above). My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
 
 ## Original Description by Vaishaal Shankar
