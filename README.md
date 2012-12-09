@@ -3,9 +3,9 @@ Ninja Scraper
 Get your exams from Ninja Course!
 
 ## Versions and Changelog
-* **v1.2**(12/8/2012): Modified to take one less command-line argumment, aka no need for professor's name anymore! It will now scrape through all exams belong to professors whose names are on the Ratings tab. Also, the exams will be saved in a directory named after the course whose exams you want to search for.
-* **v1.1**(12/7/2012): Modified to work with every department, but users still need the abbreviations and professor's name. Also added support for Python3
-* **v1.0**(12/6/2012): Forked from https://github.com/Vaishaal/ninjascraper
+* **v1.2** (12/8/2012): Modified to take one less command-line argumment, aka no need for professor's name anymore! It will now scrape through all exams belong to professors whose names are on the Ratings tab. Also, the exams will be saved in a directory named after the course whose exams you want to search for.
+* **v1.1** (12/7/2012): Modified to work with every department, but users still need the abbreviations and professor's name. Also added support for Python3.
+* **v1.0** (12/6/2012): Forked from https://github.com/Vaishaal/ninjascraper.
 
 ## Features and Acknowledgements
 * Download all of the exams for the course you want into your local directory.
@@ -28,7 +28,7 @@ sudo apt-get install python-setuptools
 
 * Then install BeautifulSoup4 by typing:
 ```
-easy_install beautifulsoup4
+sudo easy_install beautifulsoup4
 ```
 
 (You can also follow the guide below for Py3k, just replace Python3 with Python2 or Python)
@@ -86,7 +86,7 @@ So what do you need to do? Good question.
 
 * Finally, you will also need the course number. ECON 100A's course number will be simply 100A. Please don't forget letter like 'C' for Cross-listed or 'AC' for American Culture. In other words, it's the class you want to download the exams for. This will be called **[COURSE NUMBER]**.
 
-Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved ninja_scraper.py or ninja_scraper_py3k.py in.
+Good, you are done! Time to open the terminal and get your exams! Navigate to the folder where you saved scrape_ninja.py or scrape_ninja_py3k.py in.
 
 The syntax will be
 ```
