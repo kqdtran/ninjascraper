@@ -11,12 +11,12 @@ ways = ["", "(solution)", "solution"]
 tests = ['Midterm', 'Midterm 1', 'Midterm 2', 'Midterm 3', 'Final']
 
 # Use for scrape_prof specifically
-two_four_list = ['CYPLAN', 'EALANG', 'LDARCH', 'NESTUD', 'PBHLTH']
-three_three_list = ['AGRCHM', 'BIOENG', 'CHMENG', 'CIVENG', 'COGSCI', 'COMLIT', 'DEVSTD',
+two_list = ['CYPLAN', 'EALANG', 'ELENG', 'LDARCH', 'NESTUD', 'PBHLTH']
+three_list = ['AGRCHM', 'BIOENG', 'CHMENG', 'CIVENG', 'COGSCI', 'COMLIT', 'DEVSTD',
                     'ENVDES', 'ENVSCI', 'ETHSTD', 'ETHGRP', 'INDENG', 'LANPRO', 'MATSCI',
-                    'MECENG', 'MILAFF', 'MILSCI', 'NATRES', 'NAVSCI', 'NUCENG', 'POLSCI',
-                    'PUBPOL', 'SOCWEL', 'VISSCI', 'VISSTD']
-four_two_list = ['CRITTH', 'EURAST', 'PHYSED']
+                    'MEDST', 'MECENG', 'MILAFF', 'MILSCI', 'NATRES', 'NAVSCI', 'NUCENG',
+                    'POLSCI', 'PUBPOL', 'SOCWEL', 'VISSCI', 'VISSTD']
+four_list = ['CRITTH', 'EURAST', 'PHYSED']
 
 def change_dep_match_url(dep="MECENG"):
     if dep == 'LS':
@@ -25,15 +25,11 @@ def change_dep_match_url(dep="MECENG"):
         new_dep = 'S%20ASIAN'
     elif dep == 'MESTU':
         new_dep = 'M%20E%20STU'
-    elif dep == 'ELENG':
-        new_dep = 'EL%20ENG'
-    elif dep == 'MEDST':
-        new_dep = 'MED%20ST'
-    elif dep in two_four_list:
+    elif dep in two_list:
         new_dep = dep[:2] + '%20' + dep[2:]
-    elif dep in three_three_list:
+    elif dep in three_list:
         new_dep = dep[:3] + '%20' + dep[3:]
-    elif dep in four_two_list:
+    elif dep in four_list:
         new_dep = dep[:4] + '%20' + dep[4:]
     else:
         new_dep = dep
@@ -56,7 +52,7 @@ def scrape_prof(department="COMPSCI", course="70"):
         prof_name = result.text.split()[0]
         if prof_name[-1] == ',':
             prof_name = prof_name[:-1]
-        if re.match("^[A-Za-z,_-]+$", prof_name): # if prof's name only consists of characters
+        if re.match("^[A-Za-z_-]+$", prof_name): # if prof's name only consists of characters
             output_set.add(prof_name)
     return output_set
     
