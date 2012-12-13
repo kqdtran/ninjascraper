@@ -3,6 +3,7 @@ Ninja Scraper
 Get your exams from Ninja Course!
 
 ## Versions and Changelog
+* **v1.2.1** (12/12/2012): Added more specific instructions on how to run this on Windows. Also removed some redundant code in both ".py" files.
 * **v1.2** (12/8/2012): Modified to take one less command-line argumment, aka no need for professor's name anymore! It will now scrape through all exams belong to professors whose names are on the Ratings tab. Also, the exams will be saved in a directory named after the course whose exams you want to search for.
 * **v1.1** (12/7/2012): Modified to work with every department, but users still need the abbreviations and professor's name. Also added support for Python3.
 * **v1.0** (12/6/2012): Forked from https://github.com/Vaishaal/ninjascraper.
@@ -14,10 +15,10 @@ Get your exams from Ninja Course!
 * Modified to work for every course by me, but you will need to know the department's abbreviation to search for the exams (See guide below).
 * There is a very, very tiny bug in v1.2. A couple of courses have exams belong to professors that are not on NinjaCourse. For example, CS174 has 4 exams belong to Prof. Bartlett, but as you can see, he doesn't have an entry on NC http://ninjacourses.com/explore/1/course/COMPSCI/174/#ratings so the scraper couldn't find him. I have yet to find a solution to this problem, but I'll try to look into it soon.
 
-## Installation
+## Installation (Linux/MacOSX)
 **You must have Python 2.6+ installed on your computer**. After that, just save the scrape_ninja.py (Python2) or scrape_ninja_py3k.py (Python 3) file to your local machine. 
 
-**You will also need to install BeautifulSoup4**. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. Windows and MacOSX users can find something very similar to these (see below).
+**You will also need to install BeautifulSoup4**. The below commands should help you set up everything if you are on a Debian/Ubuntu machine. MacOSX users can find something very similar to these (see below).
 
 #### If Python2 is the default version of Python on your machine and you want to use Python2
 
@@ -33,24 +34,40 @@ sudo easy_install beautifulsoup4
 
 (You can also follow the guide below for Py3k, just replace Python3 with Python2 or Python)
 
-Yup! You are good to go. **Mac OSX users** can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac. Similarly, for **Windows users**, this may help: http://www.stat.ucla.edu/~rosario/classes/07F/202a/python/index.html.
+Yup! You are good to go. **Mac OSX users** can find a very similar guide here: http://stackoverflow.com/questions/452283/how-can-i-install-the-beautiful-soup-module-on-the-mac.
 
 #### If Python3 is the default version of Python on your machine, or Python2 is default BUT you want to use Python3
 
-Note: I don't think setuptools is supported for Py3k, but instead they release something called Distribute. I don't know how to use it yet so you have to stick with me through this long installation guide (not that long :p)
+Note: You can also use Distribute to install BS4 with Python3, but I highly recommend sticking to the traditional way below. 
 
 * First, go to BS4's Website: http://www.crummy.com/software/BeautifulSoup/bs4/download/ and download the tarball of the latest version.
-* Unpack the package by right click on it and 'Extract Here'. If you want to do it via command line, I think
+* Unpack the package by right click on it and 'Extract Here'. If you want to do it via command line, execute the command
 ```
 tar -zxvf beautifulsoup4-4.1.3.tar.gz	 
 ```
- should do it. Replace the version's name in the tar file according to the version you downloaded.
+inside the directory where you saved the tarball. Replace the version's name in the tar file according to the version you downloaded.
 * cd into the directory that BS4 unpacked into. Do a 'ls' to make sure setup.py is there. Then, on the terminal, type
 ```
 sudo python3 setup.py install
 ```
 
-At this point, you should have BeautifulSoup4 installed on your machine. TIME TO GET THE EXAMS.
+## Installation (Windows)
+* First, go to http://www.python.org/getit/ and get Python based on your system architecture (X86 or X86-64). Either 3.3.0 or 2.7.3 should work!
+* Next, you need to add Python to your Windows Path if you haven't done so already. To do this, the easiest way is to go to Control Panel => System => Advanced System Settings. Click on Environment Variables. Then on the bottom, find the variable Path in System Variables. Click on edit, and add the following lines to it (for Python 2.7, similarly for other versions)
+```
+C:\Python27;C:\Python27\Lib;C:\Python27\Scripts
+``` 
+Don't forget to separate each path with a semicolon! Try to go on Window's Command Line and type 'python'. Python should then be automatically started.
+
+![Edit Path on Windows](https://raw.github.com/kqdtran/ninjascraper/master/img/pathedit.png)
+
+* Nearly done! Now download the tar.gz file from http://www.crummy.com/software/BeautifulSoup/bs4/download/. Extract it, then 'cd' to where you extracted the file, and run
+```
+python setup.py install
+```
+BeautifulSoup4 will be installed and added to the current version of Python for you. Cool!
+
+At this point, you should have BeautifulSoup4 installed on your machine. **TIME TO GET THE EXAMS.**
 
 ## Usage: For CS Courses only
 Please scroll down and read the heading below if you are not here for CS's Exams. By **CS**, I mean Computer Science, not Cognitive Science or Chicano Studies...
@@ -103,17 +120,18 @@ python3 scrape_ninja_py3k.py MATH MATH 54
 ```
 
 The result (for the above example):
+
 ![Result1](https://raw.github.com/kqdtran/ninjascraper/master/img/result1.png)
 
 ![Result2](https://raw.github.com/kqdtran/ninjascraper/master/img/result2.png)
 
-Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE FINALS!
+and similarly on Windows,
+
+![Result on Windows](https://raw.github.com/kqdtran/ninjascraper/master/img/result_windows.png)
+
+Simple? Don't let the long description scared you. GO GET YOUR EXAMS!
 
 ## FAQs
-**Q**: Why don't you write something automatically get exams for us without too many additional arguments like what Vaishaal did for CS?
-
-**A**: I would love to, but I need to study for my finals next week too... Beside, I don't really know how to do it at the moment. I will try to look into that when I can!
-
 **Q**: How do I download the .py file(s)? I saved it from Github but it turned out to be some sort of DOCTYPE HTML file?
 
 **A**: You need to download the RAW file. Click on the .py file and then the RAW tab on the top right to view/download it. You should be able to get something like this https://raw.github.com/kqdtran/ninjascraper/master/scrape_ninja.py.
@@ -134,12 +152,8 @@ Simple? Don't let the long description scared you. GO GET YOUR EXAMS AND ACE THE
 
 **A**: It should be, unfortunately. We're scraping through every combination of professor's last name, semester, year, etc. Please be patient!
 
-**Q**: This is so cool! Thanks!
-
-**A**: You're welcome :) Please say thanks to Vaishaal Shankar as well. 
-
 ## Contact Me
-Please let me know if there is any bug, or if it's not working for you (see the third to last Q&A above). My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
+Please let me know if there is any bug, or if it's not working for you (see the second to last Q&A above). Please also contact me if you have any suggestion/idea on how to improve this program. Thanks! My email is a combination of those strings: "berkeley.edu", "@", "khoatran".
 
 ## Original Description by Vaishaal Shankar
 https://github.com/Vaishaal/ninjascraper
