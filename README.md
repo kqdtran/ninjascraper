@@ -1,3 +1,6 @@
+Ninja Courses has finally removed/made private all of their exams, which means unfortunately we cannot scrape the exams anymore. I hope this program was useful to some of you while it lasted, and thanks :) 
+============= 
+
 Ninja Scraper
 =============
 Get your exams from Ninja Course!
@@ -57,7 +60,7 @@ sudo python3 setup.py install
 ```
 C:\Python27;C:\Python27\Lib;C:\Python27\Scripts
 ``` 
-Don't forget to separate each path with a semicolon! Try to go on Window's Command Line and type 'python'. Python should then be automatically started.
+. Don't forget to separate each path with a semicolon! Try to go on Window's Command Line and type 'python'. Python should then be automatically started.
 
 ![Edit Path on Windows](https://raw.github.com/kqdtran/ninjascraper/master/img/pathedit.png)
 
@@ -65,7 +68,7 @@ Don't forget to separate each path with a semicolon! Try to go on Window's Comma
 ```
 python setup.py install
 ```
-BeautifulSoup4 will be installed and added to the current version of Python for you. Cool!
+. BeautifulSoup4 will be installed and added to the current version of Python for you. Cool!
 
 At this point, you should have BeautifulSoup4 installed on your machine. **TIME TO GET THE EXAMS.**
 
@@ -78,6 +81,7 @@ On the terminal, type
 ```
 python scrape_ninja.py 61C 
 ```
+
 This will download all CS61C Exams from Ninja Course. Replace 61C with your CS class's course number to download the exams for that class. 
 
 (You may want to add a '2.7' after python if you have multiple versions of Python installed)
@@ -125,7 +129,7 @@ The result (for the above example):
 
 ![Result2](https://raw.github.com/kqdtran/ninjascraper/master/img/result2.png)
 
-and similarly on Windows,
+and similarly, on Windows,
 
 ![Result on Windows](https://raw.github.com/kqdtran/ninjascraper/master/img/result_windows.png)
 
